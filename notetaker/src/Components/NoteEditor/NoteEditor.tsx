@@ -131,7 +131,7 @@ const NoteEditor = (props: any) => {
               <CircularProgress />
             ) : (
               <Grid item container spacing={4}>
-                <Grid item sm={6} xs={12}>
+                <Grid item sm={12} xs={12} md={6}>
                   <TextareaAutosize
                     style={{ width: "100%" }}
                     rowsMin={45}
@@ -140,7 +140,7 @@ const NoteEditor = (props: any) => {
                     onKeyDown={(e) => onTabPress(e)}
                   />
                 </Grid>
-                <Grid item sm={6} xs={12}>
+                <Grid item sm={12} xs={12} md={6}>
                   <Box
                     bgcolor="#DCDCDC"
                     width="97.6%"
