@@ -23,32 +23,30 @@
 
 
 #### Log in and sign up page:
+![login](/images/login.png)
 
-![login](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\login.png)
-
-![signup](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\signup.png)
-
+![signup](/images/signup.png)
 
 
 #### Home page
 
-![home](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\home.png)
+![home](/images/home.png)
 
 
 
 #### Notes page
 
-![notes](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\notes.png)
+![notes](/images/notes.png)
 
 
 
 #### Mark Down editor page
 
-![markdown](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\markdown.png)
+![markdown](/images/markdown.png)
 
 
 
 #### Example of translation
 
-![translation](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\translation.png)
+![translation](/images/translation.png)
 
