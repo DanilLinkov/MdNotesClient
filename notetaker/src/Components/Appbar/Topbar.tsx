@@ -9,7 +9,7 @@ import {
   MenuItem,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import AuthService from "../../Services/Auth.service";
 import logo from "../../Resources/Logo.svg";
 import {
@@ -28,11 +28,11 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-interface user{
-  id: number | null,
-  password: string,
-  token: string,
-  username: string
+interface user {
+  id: number | null;
+  password: string;
+  token: string;
+  username: string;
 }
 
 const Topbar = () => {
@@ -64,10 +64,10 @@ const Topbar = () => {
 
   const onLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     i18n.changeLanguage(event.target.value as string);
-  }
+  };
 
   return (
-    <div style={{ marginBottom: "150px" }}>
+    <div style={{ marginBottom: "165px" }}>
       <AppBar position="fixed" color="inherit">
         <Toolbar>
           <Grid
@@ -153,20 +153,20 @@ const Topbar = () => {
                 justify="space-between"
                 alignItems="center"
               >
-                <Grid item>
+                <Grid item xs={2}>
                   <Typography variant="button">{user.username}</Typography>
                 </Grid>
-                <Grid item>
+                <Grid item xs={2}>
                   <Button color="inherit" onClick={onHomeClick}>
                     {t("home")}
                   </Button>
                 </Grid>
-                <Grid item>
+                <Grid item xs={4}>
                   <Button color="inherit" onClick={onLogout}>
                     {t("logout")}
                   </Button>
                 </Grid>
-                <Grid item>
+                <Grid item xs={3}>
                   <Select
                     labelId="changeLan"
                     id="changeLan"
