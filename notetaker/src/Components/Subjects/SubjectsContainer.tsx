@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const SubjecsContainer = () => {
   const history = useHistory();
   const [subjects, setSubjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const SubjecsContainer = () => {
     history.push("/addsubject");
   };
 
-  const removeCardWithId = (subjectId: any) => {
+  const removeCardWithId = (subjectId: number) => {
     const newArray = subjects.filter((subject: any) => {
       if (subject.id === subjectId) {
         return false;

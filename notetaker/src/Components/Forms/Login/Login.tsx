@@ -13,11 +13,17 @@ interface Values {
   Password: string;
 }
 
-const Login = (props: any) => {
-  const history = useHistory();
-  const [loading, setLoading] = useState(false);
+interface Status {
+  message: string,
+  loading: boolean,
+  hasError: boolean
+}
 
-  const [loginStatus, setLoginStatus] = useState({
+const Login = () => {
+  const history = useHistory();
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const [loginStatus, setLoginStatus] = useState<Status>({
     message: "",
     loading: false,
     hasError: false,

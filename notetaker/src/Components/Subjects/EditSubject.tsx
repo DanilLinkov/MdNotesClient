@@ -14,9 +14,9 @@ interface Values {
 }
 
 const EditSubject = (props: any) => {
-  const [userId, setuserId] = useState(-1);
+  const [userId, setuserId] = useState<number>(-1);
   const history = useHistory();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {

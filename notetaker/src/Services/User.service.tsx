@@ -9,17 +9,17 @@ class UserService {
 
   // NOTES
 
-  getNotesForSubjectId(subjectId: any) {
+  getNotesForSubjectId(subjectId: number) {
     return axios.get(API_URL + `Notes/GetNotesInSubject/${subjectId}`, {
       headers: authHeader(),
     });
   }
 
-  getNoteForNoteId(noteId: any) {
+  getNoteForNoteId(noteId: number) {
     return axios.get(API_URL + `Notes/${noteId}`, { headers: authHeader() });
   }
 
-  createNoteForSubjectId(title:any,subjectId:any,content:any) {
+  createNoteForSubjectId(title:string,subjectId:number,content:string) {
     const newNote = {
       title: title,
       // Can preset content later which could teach people how to use the notes
@@ -34,11 +34,11 @@ class UserService {
     return axios.post(API_URL + `Notes`, newNote, head);
   }
 
-  deleteNoteForNoteId(noteId:any) {
+  deleteNoteForNoteId(noteId:number) {
     return axios.delete(API_URL + `Notes/${noteId}`, { headers: authHeader() });
   }
 
-  editNoteForNoteId(noteId: any, title: any, content: any, subjectId: any) {
+  editNoteForNoteId(noteId: number, title: string, content: string, subjectId: number) {
     const patchNote = {
       id: noteId,
       title: title,
@@ -55,13 +55,13 @@ class UserService {
 
   // SUBJECTS
 
-  getSubjectsForUser(userId: any) {
+  getSubjectsForUser(userId: number) {
     return axios.get(API_URL + `Subjects/GetSubjectsInUser/${userId}`, {
       headers: authHeader(),
     });
   }
 
-  postSubjectToUserId(userId: any, title: any, description: any) {
+  postSubjectToUserId(userId: number, title: string, description: string) {
     const newSubject = {
       title: title,
       description: description,
@@ -75,11 +75,11 @@ class UserService {
     return axios.post(API_URL + `Subjects`, newSubject, head);
   }
 
-  deleteSubjectForSubjectId(subjectId: any) {
+  deleteSubjectForSubjectId(subjectId: number) {
     return axios.delete(API_URL + `Subjects/${subjectId}`, { headers: authHeader() });
   }
 
-  editSubjectForSubjectId(subjectId: any,title:any,description:any,userId:any) {
+  editSubjectForSubjectId(subjectId: number,title:string,description:string,userId:number) {
     const patchSubject = {
         id: subjectId,
         title: title,

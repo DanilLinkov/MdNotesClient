@@ -13,9 +13,9 @@ interface Values {
   Description: string;
 }
 
-const AddSubject = (props: any) => {
-  const [userId, setuserId] = useState(-1);
-  const [loading, setLoading] = useState(false);
+const AddSubject = () => {
+  const [userId, setuserId] = useState<number>(-1);
+  const [loading, setLoading] = useState<boolean>(false);
   const history = useHistory();
   const { t, i18n } = useTranslation();
 

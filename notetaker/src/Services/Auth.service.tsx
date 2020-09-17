@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "https://mdnotesapi.azurewebsites.net/api/Users/";
 
 class AuthService {
-  login(username: any, password: any) {
+  login(username: string, password: string) {
     return axios
       .post(API_URL + "authenticate", {
         username,
@@ -22,7 +22,7 @@ class AuthService {
     localStorage.removeItem("user");
   }
 
-  register(username: any, password: any) {
+  register(username: string, password: string) {
     return axios.post(API_URL + "register", {
       username,
       password,

@@ -15,10 +15,10 @@ import { useTranslation } from "react-i18next";
 
 const NoteEditor = (props: any) => {
   const history = useHistory();
-  const [title, setTitle] = useState("");
-  const [markdown, setMarkdown] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [saving, setSaving] = useState(false);
+  const [title, setTitle] = useState<string>("");
+  const [markdown, setMarkdown] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [saving, setSaving] = useState<boolean>(false);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const NoteEditor = (props: any) => {
     }
   }, [history,props.location.state]);
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMarkdown(e.target.value);
   };
 
@@ -69,7 +69,7 @@ const NoteEditor = (props: any) => {
     });
   };
 
-  const onTitleChange = (e: any) => {
+  const onTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     setTitle(e.target.value);
   };
 

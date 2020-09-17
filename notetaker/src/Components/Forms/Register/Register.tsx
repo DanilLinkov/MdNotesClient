@@ -28,7 +28,7 @@ const Register = () => {
   const onSubmit = (values: Values) => {
     setLoading(true);
     if (values.Password && values.Username && values.ReEnteredPassword) {
-      var temp = true;
+      var temp:boolean = true;
 
       if (
         !checkCorrectLength(values.Username) &&

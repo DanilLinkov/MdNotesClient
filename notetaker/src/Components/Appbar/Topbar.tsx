@@ -28,8 +28,15 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const Topbar = (props: any) => {
-  const [user, setUser] = useState({
+interface user{
+  id: number | null,
+  password: string,
+  token: string,
+  username: string
+}
+
+const Topbar = () => {
+  const [user, setUser] = useState<user>({
     id: null,
     password: "",
     token: "",
@@ -37,7 +44,6 @@ const Topbar = (props: any) => {
   });
   const history = useHistory();
   const { t, i18n } = useTranslation();
-  const [language,setLanguage] = useState("en");
 
   useEffect(() => {
     if (AuthService.getCurrentUser()) {
@@ -57,7 +63,6 @@ const Topbar = (props: any) => {
   };
 
   const onLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setLanguage(event.target.value as string);
     i18n.changeLanguage(event.target.value as string);
   }
 

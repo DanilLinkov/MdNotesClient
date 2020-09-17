@@ -21,7 +21,7 @@ function App() {
   );
 }
 
-const Home = ({ match }: any) => {
+const Home = () => {
   return (
     <div>
       <Appbar />

@@ -23,7 +23,14 @@ const useStyles = makeStyles({
   },
 });
 
-const NoteCard = (props: any) => {
+interface IProps {
+  title: string,
+  id: number,
+  subjectId: number,
+  removeCard: (cardId:number) => void
+}
+
+const NoteCard = (props: IProps) => {
   const history = useHistory();
   const classes = useStyles();
   const { t, i18n } = useTranslation();

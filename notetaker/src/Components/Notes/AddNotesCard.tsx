@@ -20,21 +20,26 @@ const useStyles = makeStyles({
   },
 });
 
-const AddNotesCard = (props: any) => {
+interface IProps {
+  subjectId: number,
+  addNote: (cardId:number,title:string) => void
+}
+
+const AddNotesCard = (props: IProps) => {
   const classes = useStyles();
-  const [title, settitle] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [title, settitle] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
   const { t, i18n } = useTranslation();
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     settitle(e.target.value);
   };
 
   const onSubmit = () => {
     setLoading(true);
     if (title.length < 1) {
-      const tempTitle = t("title");
-      const tempContent = t("content");
+      const tempTitle:string = t("title");
+      const tempContent:string = t("content");
       UserService.createNoteForSubjectId(tempTitle, props.subjectId,tempContent).then(
         (response) => {
           props.addNote(response.data.id, tempTitle);
@@ -42,7 +47,7 @@ const AddNotesCard = (props: any) => {
         }
       );
     } else {
-      const tempContent = t("content");
+      const tempContent:string = t("content");
       UserService.createNoteForSubjectId(title, props.subjectId,tempContent).then(
         (response) => {
           props.addNote(response.data.id, title);

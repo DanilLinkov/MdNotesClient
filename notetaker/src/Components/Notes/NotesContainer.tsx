@@ -27,7 +27,7 @@ const NotesContainer = (props: any) => {
     }
   }, [history, props.location.state]);
 
-  const addNoteCardWithId = (cardId: any, title: any) => {
+  const addNoteCardWithId = (cardId: number, title: string) => {
     const newNoteCard = {
       id: cardId,
       title: title,
@@ -36,7 +36,7 @@ const NotesContainer = (props: any) => {
     setNotes((oldNotes: any) => [...oldNotes, newNoteCard]);
   };
 
-  const removeCardWithId = (cardId: any) => {
+  const removeCardWithId = (cardId: number) => {
     const newArray = notes.filter((note: any) => {
       if (note.id === cardId) {
         return false;

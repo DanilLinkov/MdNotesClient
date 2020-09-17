@@ -23,7 +23,14 @@ const useStyles = makeStyles({
   },
 });
 
-const SubjectCard = (props: any) => {
+interface IProps {
+  id: number,
+  title: string,
+  description: string,
+  removeCard: (subjectId:number) => void
+}
+
+const SubjectCard = (props: IProps) => {
   const history = useHistory();
   const classes = useStyles();
   const { title, description, id } = props;
