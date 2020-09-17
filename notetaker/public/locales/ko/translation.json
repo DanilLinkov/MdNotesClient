@@ -15,5 +15,7 @@
     "logout": "로그 아웃",
     "edit": "편집하다",
     "gotonotes": "메모로 이동",
-    "addnewsubject": "새 주제 추가"
+    "addnewsubject": "새 주제 추가",
+    "submit": "제출",
+    "content": "# 이 파일은 markdown\n### 구문에 대해 자세히 알아 보려면 다음으로 이동하십시오. https://www.markdownguide.org/basic-syntax/"
 }

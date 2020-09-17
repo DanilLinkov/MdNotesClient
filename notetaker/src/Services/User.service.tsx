@@ -6,6 +6,7 @@ const API_URL = "https://mdnotesapi.azurewebsites.net/api/";
 
 class UserService {
 
+
   // NOTES
 
   getNotesForSubjectId(subjectId: any) {
@@ -18,11 +19,11 @@ class UserService {
     return axios.get(API_URL + `Notes/${noteId}`, { headers: authHeader() });
   }
 
-  createNoteForSubjectId(title:any,subjectId:any) {
+  createNoteForSubjectId(title:any,subjectId:any,content:any) {
     const newNote = {
       title: title,
       // Can preset content later which could teach people how to use the notes
-      content: "# This is a markdown file\n### To learn more about markdown syntax go to https://www.markdownguide.org/basic-syntax/",
+      content: content,
       subjectId: subjectId,
     };
 

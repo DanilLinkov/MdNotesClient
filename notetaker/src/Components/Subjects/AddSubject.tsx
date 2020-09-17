@@ -6,6 +6,7 @@ import UserService from "../../Services/User.service";
 import AuthService from "../../Services/Auth.service";
 import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { useTranslation } from 'react-i18next';
 
 interface Values {
   Title: string;
@@ -16,6 +17,7 @@ const AddSubject = (props: any) => {
   const [userId, setuserId] = useState(-1);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (AuthService.getCurrentUser()) {
@@ -32,7 +34,7 @@ const AddSubject = (props: any) => {
     {
       values = {
         ...values,
-        Title: "Title"
+        Title: t("title")
       }
     }
 
@@ -40,7 +42,7 @@ const AddSubject = (props: any) => {
     {
       values = {
         ...values,
-        Description: "Description"
+        Description: t("description")
       }
     }
 
@@ -93,14 +95,14 @@ const AddSubject = (props: any) => {
           >
             {({ values }) => (
               <Form style={{ padding: "3em" }}>
-                <Typography variant="h4">Create a new subject</Typography>
+                <Typography variant="h4">{t("createanewsubject")}</Typography>
                 <div style={{ marginTop: "1em" }}>
-                  <Field name="Title" placeholder="Title" component={MyField} />
+                  <Field name="Title" placeholder={t("title")} component={MyField} />
                 </div>
                 <div>
                   <Field
                     name="Description"
-                    placeholder="Description"
+                    placeholder={t("description")}
                     component={MyField}
                     rows="5"
                   />
@@ -109,10 +111,10 @@ const AddSubject = (props: any) => {
                   style={{ marginTop: "1em", marginRight: "2em" }}
                   type="submit"
                 >
-                  Create
+                  {t("create")}
                 </Button>
                 <Button style={{ marginTop: "1em" }} onClick={onClickCancel}>
-                  Cancel
+                  {t("cancel")}
                 </Button>
               </Form>
             )}

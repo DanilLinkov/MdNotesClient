@@ -15,5 +15,7 @@
     "logout": "Log out",
     "edit": "Edit",
     "gotonotes": "Go to notes",
-    "addnewsubject": "Add new subject"
+    "addnewsubject": "Add new subject",
+    "submit": "submit",
+    "content": "# This is a markdown file\n### To learn more about markdown syntax go to https://www.markdownguide.org/basic-syntax/"
 }

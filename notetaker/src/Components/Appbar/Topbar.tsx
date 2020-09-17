@@ -153,20 +153,19 @@ const Topbar = (props: any) => {
                 </Grid>
                 <Grid item>
                   <Button color="inherit" onClick={onHomeClick}>
-                    Home
+                    {t("home")}
                   </Button>
                 </Grid>
                 <Grid item>
                   <Button color="inherit" onClick={onLogout}>
-                    log out
+                    {t("logout")}
                   </Button>
                 </Grid>
                 <Grid item>
-                  {" "}
                   <Select
                     labelId="changeLan"
                     id="changeLan"
-                    value={language}
+                    value={i18n.language}
                     onChange={onLanguageChange}
                     variant="outlined"
                   >

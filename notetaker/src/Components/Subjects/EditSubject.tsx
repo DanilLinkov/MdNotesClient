@@ -33,14 +33,14 @@ const EditSubject = (props: any) => {
     if (values.Title.length < 1) {
       values = {
         ...values,
-        Title: "Title",
+        Title: t("title"),
       };
     }
 
     if (values.Description.length < 1) {
       values = {
         ...values,
-        Description: "Description",
+        Description: t("description"),
       };
     }
 
@@ -96,18 +96,18 @@ const EditSubject = (props: any) => {
               >
                 {({ values }) => (
                   <Form style={{ padding: "3em" }}>
-                    <Typography variant="h4">Edit Subject</Typography>
+                    <Typography variant="h4">{t("editsubject")}</Typography>
                     <div style={{ marginTop: "1em" }}>
                       <Field
                         name="Title"
-                        placeholder="Title"
+                        placeholder={t("title")}
                         component={MyField}
                       />
                     </div>
                     <div>
                       <Field
                         name="Description"
-                        placeholder="Description"
+                        placeholder={t("description")}
                         component={MyField}
                         rows="5"
                       />
@@ -116,13 +116,13 @@ const EditSubject = (props: any) => {
                       style={{ marginTop: "1em", marginRight: "2em" }}
                       type="submit"
                     >
-                      Update
+                      {t("submit")}
                     </Button>
                     <Button
                       style={{ marginTop: "1em" }}
                       onClick={onClickCancel}
                     >
-                      Cancel
+                      {t("cancel")}
                     </Button>
                   </Form>
                 )}

@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 import UserService from "../../Services/User.service";
 import MDReactComponent from "markdown-react-js";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { useTranslation } from "react-i18next";
 
 const NoteEditor = (props: any) => {
   const history = useHistory();
@@ -18,6 +19,7 @@ const NoteEditor = (props: any) => {
   const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setLoading(true);
@@ -115,12 +117,12 @@ const NoteEditor = (props: any) => {
               <Grid container item direction="row" justify="center">
                 <Grid item>
                   <Button onClick={onSaveClicked} style={{ color: "#ff4b5c" }}>
-                    Save
+                    {t("save")}
                   </Button>
                 </Grid>
                 <Grid>
                   <Button onClick={onClickedBack} style={{ color: "#ff4b5c" }}>
-                    Back
+                    {t("back")}
                   </Button>
                 </Grid>
               </Grid>
