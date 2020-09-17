@@ -59,10 +59,23 @@ const NoteEditor = (props: any) => {
 
   const onSaveClicked = () => {
     setSaving(true);
+    let tempTitle:string = title;
+    let tempMarkdown:string = markdown;
+
+    if(tempTitle.length<1)
+    {
+      tempTitle = t("title");
+    }
+
+    if(tempMarkdown.length<1)
+    {
+      tempMarkdown = "markdown"
+    }
+
     UserService.editNoteForNoteId(
       props.location.state.noteId,
-      title,
-      markdown,
+      tempTitle,
+      tempMarkdown,
       props.location.state.subjectId
     ).then((response) => {
       setSaving(false);
