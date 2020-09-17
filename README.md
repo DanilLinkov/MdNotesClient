@@ -24,9 +24,9 @@
 
 #### Log in and sign up page:
 
-![login](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\login.png)
+![login](images\login.png)
 
-![signup](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\signup.png)
+![signup](images\signup.png)
 
 
 
