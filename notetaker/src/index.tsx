@@ -1,15 +1,23 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import "./i18n";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Suspense
+      fallback={
+        <div style={{ margin: "auto", marginTop: "30%" }}>
+          <CircularProgress />
+        </div>
+      }
+    >
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+    </Suspense>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

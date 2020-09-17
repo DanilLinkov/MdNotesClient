@@ -6,6 +6,7 @@ import UserService from "../../Services/User.service";
 import AuthService from "../../Services/Auth.service";
 import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { useTranslation } from 'react-i18next';
 
 interface Values {
   Title: string;
@@ -16,6 +17,7 @@ const EditSubject = (props: any) => {
   const [userId, setuserId] = useState(-1);
   const history = useHistory();
   const [loading, setLoading] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (AuthService.getCurrentUser()) {

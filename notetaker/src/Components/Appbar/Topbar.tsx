@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Toolbar, Typography, Grid, Button } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Grid,
+  Button,
+  Select,
+  MenuItem,
+} from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import AuthService from "../../Services/Auth.service";
 import logo from "../../Resources/Logo.svg";
 import {
@@ -27,6 +36,8 @@ const Topbar = (props: any) => {
     username: "",
   });
   const history = useHistory();
+  const { t, i18n } = useTranslation();
+  const [language,setLanguage] = useState("en");
 
   useEffect(() => {
     if (AuthService.getCurrentUser()) {
@@ -45,8 +56,13 @@ const Topbar = (props: any) => {
     history.push("/");
   };
 
+  const onLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setLanguage(event.target.value as string);
+    i18n.changeLanguage(event.target.value as string);
+  }
+
   return (
-    <div style={{ marginBottom: "150px"}}>
+    <div style={{ marginBottom: "150px" }}>
       <AppBar position="fixed" color="inherit">
         <Toolbar>
           <Grid
@@ -144,6 +160,20 @@ const Topbar = (props: any) => {
                   <Button color="inherit" onClick={onLogout}>
                     log out
                   </Button>
+                </Grid>
+                <Grid item>
+                  {" "}
+                  <Select
+                    labelId="changeLan"
+                    id="changeLan"
+                    value={language}
+                    onChange={onLanguageChange}
+                    variant="outlined"
+                  >
+                    <MenuItem value={"en"}>en</MenuItem>
+                    <MenuItem value={"ko"}>ko</MenuItem>
+                    <MenuItem value={"chi"}>chi</MenuItem>
+                  </Select>
                 </Grid>
               </Grid>
             </div>

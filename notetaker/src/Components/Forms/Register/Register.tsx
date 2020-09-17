@@ -172,7 +172,7 @@ const Register = () => {
             <div>
               <Field
                 name="ReEnteredPassword"
-                placeholder="ReEnteredPassword"
+                placeholder="Reenter password"
                 component={Password}
                 error={userOverAllError.length > 0}
                 helperText={userOverAllError}

@@ -1,0 +1,19 @@
+{
+    "title": "표제",
+    "description": "기술",
+    "save": "저장",
+    "remove": "없애다",
+    "gotomarkdown": "Markdown으로 이동",
+    "addnewnote": "새 메모 추가",
+    "back": "뒤",
+    "create": "창조하다",
+    "createanewsubject": "새로운 주제 만들기",
+    "editsubject": "주제 수정",
+    "cancel": "취소",
+    "update": "최신 정보",
+    "home": "집",
+    "logout": "로그 아웃",
+    "edit": "편집하다",
+    "gotonotes": "메모로 이동",
+    "addnewsubject": "새 주제 추가"
+}
