@@ -24,31 +24,31 @@
 
 #### Log in and sign up page:
 
-![image-20200917232651361](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917232651361.png)
+![login](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\login.png)
 
-![image-20200917232806160](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917232806160.png)
+![signup](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\signup.png)
 
 
 
 #### Home page
 
-![image-20200917232845928](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917232845928.png)
+![home](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\home.png)
 
 
 
 #### Notes page
 
-![image-20200917232930060](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917232930060.png)
+![notes](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\notes.png)
 
 
 
 #### Mark Down editor page
 
-![image-20200917232955185](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917232955185.png)
+![markdown](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\markdown.png)
 
 
 
 #### Example of translation
 
-![image-20200917233021425](C:\Users\danil\AppData\Roaming\Typora\typora-user-images\image-20200917233021425.png)
+![translation](C:\Users\danil\Desktop\MDNotesForHosting\Note-taker-frontend\images\translation.png)
 
