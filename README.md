@@ -1,7 +1,8 @@
-#### Hosted link https://mdnotes.azurewebsites.net/
+#### Hosted link https://mdnotesclient.azurewebsites.net/
 
-#### Backend github link: https://github.com/DanilLinkov/Note-taker
+#### Backend github link: https://github.com/DanilLinkov/MdNotesApi
 
+#### Backend hosted on: https://mdnotesapi.azurewebsites.net/swagger/index.html
 
 
 # Features
