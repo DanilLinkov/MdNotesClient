@@ -1,5 +1,3 @@
-
-
 #### Hosted link https://mdnotes.azurewebsites.net/
 
 #### Backend github link: https://github.com/DanilLinkov/Note-taker
@@ -49,4 +47,3 @@
 #### Example of translation
 
 ![translation](/images/translation.png)
-

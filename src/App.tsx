@@ -15,7 +15,7 @@ function App() {
       <Switch>
         <Route path="/register" exact component={Register} />
         <Route path="/login" exact component={Login} />
-        <Route path="/" component={Home}/>
+        <Route path="/" component={Home} />
       </Switch>
     </div>
   );
@@ -26,11 +26,11 @@ const Home = () => {
     <div>
       <Appbar />
       <Switch>
-        <Route path="/addsubject" component={AddSubject}/>
-        <Route path="/editsubject" component={EditSubject}/>
-        <Route path="/notes" component={NotesContainer}/>
-        <Route path="/editor" component={NoteEditor}/>
-        <Route path="/" component={SubjecsContainer}/>
+        <Route path="/addsubject" component={AddSubject} />
+        <Route path="/editsubject" component={EditSubject} />
+        <Route path="/notes" component={NotesContainer} />
+        <Route path="/editor" component={NoteEditor} />
+        <Route path="/" component={SubjecsContainer} />
       </Switch>
     </div>
   );
